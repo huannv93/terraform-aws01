@@ -210,7 +210,11 @@ Vậy là ta đã tìm hiểu xong về một số cách đơn giản để lậ
 
 Link : https://viblo.asia/p/terraform-series-bai-3-terraform-functional-programming-4P856GnWKY3
 
---Bai4:  
+
+--**Bai4:  Terraform Series - Bài 4 - Terraform Module: Create Virtual Private Cloud on AWS**  ----
+
+- 
+
 
 
 
