@@ -42,7 +42,7 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 Life cycle : Vong doi cua terraform: 
 
 
-![image](https://user-images.githubusercontent.com/64687828/178224394-938870ae-8481-41a3-8cad-0636700ce350.png)
+![image](https://user-images.githubusercontent.com/64687828/178397719-b588f8cd-4a57-4f65-9851-22d0e13894ab.png)
 
 
 Create() sẽ được gọi trong quá trình tạo resource, Read() được gọi trong quá trình plan, Update() được gọi trong quá trình cập nhật resource, và Delete() được gọi trong quá trình xóa resource.
