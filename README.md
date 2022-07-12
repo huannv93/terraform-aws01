@@ -186,13 +186,31 @@ output "ec2" {
 
 
 - **File function**
+File function sẽ giúp ta tải nội dung của một file nào đó vào bên trong config file của terraform
 
+- **Fileset function**
+```{
+  "index.html": "index.html",
+  "index.css" : "index.css"
+}
+```
+- **Local values**
+Không giống như variable block, ta cần khai báo type, thì locals block ta sẽ gán thẳng giá trị cho nó. Ví dụ như sau:
+```
+locals {
+  one = 1
+  two = 2
+  name = "max"
+  flag = true
+}
+```
 
-
-
-
+Tong ket bai 3: 
+Vậy là ta đã tìm hiểu xong về một số cách đơn giản để lập trình được trong terraform. Sử dụng varibale để chứa biến, sử dụng output để show giá trị ra terminal, sử dụng for để duyệt qua mảng, sử dụng locals để lưu giá trị và sử dụng lại nhiều lần. Nếu có thắc mắc hoặc cần giải thích rõ thêm chỗ nào thì các bạn có thể hỏi dưới phần comment. Hẹn gặp các bạn ở bài tiếp theo.
 
 Link : https://viblo.asia/p/terraform-series-bai-3-terraform-functional-programming-4P856GnWKY3
+
+--Bai4:  
 
 
 
