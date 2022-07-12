@@ -11,6 +11,7 @@ terraform plan -parallelism=m /// m = 2 tang toc do plan
 $ terraform plan -out plan.out
 $ terraform show -json plan.out > plan.json   // luu ket qua plan
 
+```
 
  terraform plan -out plan.out
  terraform apply "plan.out"   /// chay lenh apply voi ket qua da luu o tren 
