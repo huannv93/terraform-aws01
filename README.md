@@ -66,6 +66,130 @@ Link research: https://viblo.asia/p/terraform-series-bai-2-life-cycle-cua-mot-re
 
 
 
+3! **Terraform Series - Bài 3 - Terraform functional programming**
+
+variable.tf
+```
+variable "instance_type" {
+  type = string
+  description = "Instance type of the EC2"
+}
+```
+- type kiểu dữ liệu  : string la ky tu vd hello world.... ngoai ra con co cac type khac Basic type: string, number, bool ,,,, Complex type: list(), set(), map(), object(), tuple()
+
+Trong terraform, type number và type bool sẽ được convert thành type string khi cần thiết. Nghĩa là 1 sẽ thành "1", true sẽ thành "true"
+
+- Gán giá trị cho bien variable 
+variable.tfvars
+instance_type = "t2.micro"
+
+Khi chay apply , default se lay file variable.tfvars de dien gia tri bien , neu muon defiend rieng tung tfvaf thi dung nhu sau
+```terraform apply -var-file="production.tfvars" ```
+---> production.tfvvars dang duoc chon
++ Validating variables
+điều khiện với variables :
+```
+variable "instance_type" {
+  type = string
+  description = "Instance type of the EC2"
+
+  validation {
+    condition = contains(["t2.micro", "t3.small"], var.instance_type)
+    error_message = "Value not allow."
+  }
+}
+```
+
+- **Output**
+```
+...
+
+output "ec2" {
+  value = {
+    public_ip = aws_instance.hello.public_ip
+  }
+}
+```
+
+
+- **Count parameter**
+---> muc dich: vi du can tao 1000 EC2 cung luc
+```
+provider "aws" {
+  region = "us-west-2"
+}
+
+data "aws_ami" "ubuntu" {
+  most_recent = true
+
+  filter {
+    name   = "name"
+    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
+  }
+
+  owners = ["099720109477"]
+}
+
+resource "aws_instance" "hello" {
+  count         = 5
+  ami           = data.aws_ami.ubuntu.id
+  instance_type = var.instance_type
+}
+
+output "ec2" {
+  value = {
+    public_ip1 = aws_instance.hello[0].public_ip
+    public_ip2 = aws_instance.hello[1].public_ip
+    public_ip3 = aws_instance.hello[2].public_ip
+    public_ip4 = aws_instance.hello[3].public_ip
+    public_ip5 = aws_instance.hello[4].public_ip
+  }
+}
+```
+
+- **For expressions**
+For cho phép ta duyệt qua một list, cú pháp của lệnh for như sau:
+
+Ta sẽ dùng for để rút gọn phần output IP của EC2. Cập nhật lại file main.tf
+```
+...
+
+resource "aws_instance" "hello" {
+  count         = 5
+  ami           = data.aws_ami.ubuntu.id
+  instance_type = var.instance_type
+}
+
+output "ec2" {
+  value = {
+    public_ip = [ for v in aws_instance.hello : v.public_ip ]
+  }
+}
+```
+- **Format function**
+Hàm format sẽ giúp ta nối chuỗi theo dạng ta muốn, cập nhật output lại như sau:
+
+```
+...
+
+resource "aws_instance" "hello" {
+  count         = 5
+  ami           = data.aws_ami.ubuntu.id
+  instance_type = var.instance_type
+}
+
+output "ec2" {
+  value = { for i, v in aws_instance.hello : format("public_ip%d", i + 1) => v.public_ip }
+}
+```
+
+
+
+-
+
+
+
+Link : https://viblo.asia/p/terraform-series-bai-3-terraform-functional-programming-4P856GnWKY3
 
 
 
