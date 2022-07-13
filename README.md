@@ -499,8 +499,10 @@ variable "availability_zone" {
 Ở trên ta viết với mục đích là tìm hiểu, khi làm thực tế cho môi trường production, ta nên xài những module có sẵn trên mạng, họ viết sẽ kĩ hơn nhiều và sẽ có rất nhiều chức năng và use case hơn so với ta phải tự viết. Ví dụ vpc module ở trên, ta có thể sử dụng một module có sẵn là terraform-aws-modules/vpc/aws.
 HASCICOP has document for create AWS: https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws/latest
 
--
+- Tong ket bai 4: 
+Vậy là ta đã tìm hiểu xong cách viết code từ đầu và sau đó tổ chức code lại thành module, cách publish một module lên trên mạng, cách sử dụng module có sẵn. Module giúp ta sử dụng code có sẵn và tránh phải viết code đi code lại nhiều lần. Nếu có thắc mắc hoặc cần giải thích rõ thêm chỗ nào thì các bạn có thể hỏi dưới phần comment. Hẹn gặp mọi người ở bài tiếp theo. Bài tiếp theo ta cũng nói tiếp về module mà sẽ đi sâu hơn chút, ta sẽ làm ví dụ tạo VPC, Autoscaling Group và Load Balancer trên AWS.
 
+- https://viblo.asia/p/terraform-series-bai-4-terraform-module-create-virtual-private-cloud-on-aws-ORNZqp2MK0n
 
 
 
