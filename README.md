@@ -213,7 +213,7 @@ Link : https://viblo.asia/p/terraform-series-bai-3-terraform-functional-programm
 
 --**Bai4:  Terraform Series - Bài 4 - Terraform Module: Create Virtual Private Cloud on AWS**  ----
 
-
+- **Provisioning Virtual Private Cloud**
 ```
 provider "aws" {
   region  = "us-west-2"
@@ -319,6 +319,188 @@ resource "aws_route_table_association" "public_private" {
   route_table_id = aws_route_table.private.id
 }
 ```
+
+```
+terraform apply -auto-approve
+
+terraform destroy -auto-approve
+
+```
+
+![image](https://user-images.githubusercontent.com/64687828/178700081-ae0b1976-1aff-4c1b-a36a-2a4267dceec1.png)
+
+- **Terraform Module**
+Một module cơ bản sẽ gồm 3 file sau đây:
+.
+├── main.tf
+└── vpc
+    ├── main.tf
+    ├── outputs.tf
+    └── variables.tf
+
+
+main.tf chứa code.
+variables.tf chứa input vào của module.
+outputs.tf chưa giá trị đầu ra của module.
+
+Ngoài ra còn một vài file khác mà không bắt buộc là providers.tf, versions.tf
+// thuong se co file variables.tfvar de truyen gia tri theo tung product ( dev, staging, production...)  ./dev/dev.tfvar , ./product/p1.tfvar
+
+
+main.tf of 1 module:
+```
+module <module_name> {
+  source = <source>
+  version = <version>
+
+  input_one = <input_one>
+  input_two = <input_two>
+}
+```
+
+./main.tf
+```
+provider "aws" {
+  region = "us-west-2"
+}
+
+module "vpc" {
+  source = "./vpc"
+
+  vpc_cidr_block    = "10.0.0.0/16"
+  private_subnet    = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
+  public_subnet     = ["10.0.4.0/24", "10.0.5.0/24", "10.0.6.0/24"]
+  availability_zone = ["us-west-2a", "us-west-2b", "us-west-2c"]
+}
+```
+
+./vpc/main.tf 
+
+```
+resource "aws_vpc" "vpc" {
+  cidr_block           = var.vpc_cidr_block
+  enable_dns_hostnames = true
+
+  tags = {
+    "Name" = "custom"
+  }
+}
+
+resource "aws_subnet" "private_subnet" {
+  count = length(var.private_subnet)
+
+  vpc_id            = aws_vpc.vpc.id
+  cidr_block        = var.private_subnet[count.index]
+  availability_zone = var.availability_zone[count.index % length(var.availability_zone)]
+
+  tags = {
+    "Name" = "private-subnet"
+  }
+}
+
+resource "aws_subnet" "public_subnet" {
+  count = length(var.public_subnet)
+
+  vpc_id            = aws_vpc.vpc.id
+  cidr_block        = var.public_subnet[count.index]
+  availability_zone = var.availability_zone[count.index % length(var.availability_zone)]
+
+  tags = {
+    "Name" = "public-subnet"
+  }
+}
+
+resource "aws_internet_gateway" "ig" {
+  vpc_id = aws_vpc.vpc.id
+
+  tags = {
+    "Name" = "custom"
+  }
+}
+
+resource "aws_route_table" "public" {
+  vpc_id = aws_vpc.vpc.id
+
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.ig.id
+  }
+
+  tags = {
+    "Name" = "public"
+  }
+}
+
+resource "aws_route_table_association" "public_association" {
+  for_each       = { for k, v in aws_subnet.public_subnet : k => v }
+  subnet_id      = each.value.id
+  route_table_id = aws_route_table.public.id
+}
+
+resource "aws_eip" "nat" {
+  vpc = true
+}
+
+resource "aws_nat_gateway" "public" {
+  depends_on = [aws_internet_gateway.ig]
+
+  allocation_id = aws_eip.nat.id
+  subnet_id     = aws_subnet.public_subnet[0].id
+
+  tags = {
+    Name = "Public NAT"
+  }
+}
+
+resource "aws_route_table" "private" {
+  vpc_id = aws_vpc.vpc.id
+
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_nat_gateway.public.id
+  }
+
+  tags = {
+    "Name" = "private"
+  }
+}
+
+resource "aws_route_table_association" "public_private" {
+  for_each       = { for k, v in aws_subnet.private_subnet : k => v }
+  subnet_id      = each.value.id
+  route_table_id = aws_route_table.private.id
+}
+```
+
+./vpc/variables.tf
+
+```
+variable "vpc_cidr_block" {
+  type    = string
+  default = "10.0.0.0/16"
+}
+
+variable "private_subnet" {
+  type    = list(string)
+}
+
+variable "public_subnet" {
+  type    = list(string)
+}
+
+variable "availability_zone" {
+  type    = list(string)
+}
+```
+
+
+
+-   **Common module**
+Ở trên ta viết với mục đích là tìm hiểu, khi làm thực tế cho môi trường production, ta nên xài những module có sẵn trên mạng, họ viết sẽ kĩ hơn nhiều và sẽ có rất nhiều chức năng và use case hơn so với ta phải tự viết. Ví dụ vpc module ở trên, ta có thể sử dụng một module có sẵn là terraform-aws-modules/vpc/aws.
+HASCICOP has document for create AWS: https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws/latest
+
+-
+
 
 
 
