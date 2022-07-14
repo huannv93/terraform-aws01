@@ -1,0 +1,20 @@
+locals {
+  project = "terraform-series"
+}
+
+provider "aws" {
+  region = "us-west-2"
+}
+
+module "networking" {
+  source = "./modules/networking"
+}
+
+module "database" {
+  source = "./modules/database"
+}
+
+module "autoscaling" {
+  source = "./modules/autoscaling"
+}
+
