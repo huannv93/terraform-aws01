@@ -504,6 +504,8 @@ Vậy là ta đã tìm hiểu xong cách viết code từ đầu và sau đó t�
 
 - https://viblo.asia/p/terraform-series-bai-4-terraform-module-create-virtual-private-cloud-on-aws-ORNZqp2MK0n
 
+huan ga vc
+
 
 
 
