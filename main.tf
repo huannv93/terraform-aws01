@@ -1,22 +1,13 @@
-variable "access_key" {
-   type=string
-}
-
-variable "secret_key" {
-   type=string
-}
-
-
 provider "aws" {
-  region     = "us-west-2"
-  access_key = "${var.access_key}"
-  secret_key = "${var.secret_key}"
+  region = "us-west-2"
 }
 
-resource "aws_instance" "hello" {
-  ami           = "ami-09dd2e08d601bff67"
-  instance_type = "t2.micro"
-  tags = {
-    Name = "HelloWorld"
-  }
+module "vpc" {
+  source = "./vpc"
+
+  vpc_cidr_block    = "10.0.0.0/16"
+  private_subnet    = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
+  public_subnet     = ["10.0.4.0/24", "10.0.5.0/24", "10.0.6.0/24"]
+  availability_zone = ["us-west-2a", "us-west-2b", "us-west-2c"]
 }
+
