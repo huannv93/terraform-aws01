@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2591c97d-7503-4f21-bf18-7248bdc38cb2" name="Changes" comment="test resolved conflict">
+      <change afterPath="$PROJECT_DIR$/bai05/modules/database/main.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai05/modules/database/outputs.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai05/modules/database/variables.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai05/modules/networking/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/bai05/modules/networking/main.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai05/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/bai05/main.tf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +29,9 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="29Mvyru5plw0RxrtshimD8mhxxi" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -57,7 +65,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657857335326</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="test resolved conflict">
+      <created>1657858024853</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1657858024853</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
