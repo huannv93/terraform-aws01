@@ -1,10 +1,10 @@
 # terraform-aws01
-2222
+111
 export TF_VAR_access_key= enteryourkey
 
 export TF_VAR_secret_key= enteryourkey
 
-````
+```
 terraform init  // command is used to initialize a working directory containing Terraform configuration files. first time only
 terraform plan  // verified code
 terraform plan -parallelism=m /// m = 2 tang toc do plan
