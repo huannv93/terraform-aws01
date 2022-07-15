@@ -1,7 +1,7 @@
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "3.12.0"
-  
+
   name    = "${var.project}-vpc"
   cidr    = var.vpc_cidr
   azs     = data.aws_availability_zones.available.names
@@ -13,12 +13,7 @@ module "vpc" {
   create_database_subnet_group = true
   enable_nat_gateway           = true
   single_nat_gateway           = true
-
-...// tao Security Group cho VPC tao o tren 
-Cho phép truy cập port 80 của ALB từ mọi nơi.
-Cho phép truy cập port 80 của các EC2 từ ALB.
-Cho phép truy cập port 5432 của RDS từ EC2.
-...//
+}
 
 module "alb_sg" {
   source = "terraform-in-action/sg/aws"
@@ -52,10 +47,6 @@ module "db_sg" {
     }
   ]
 }
-
-// output giatrri
-//Để truy cập giá trị của một module, ta dùng systax sau module.<name>.<output_value>, ví dụ để truy cập giá trị lb_sg id của networking module.
-
 output "vpc" {
   value = module.vpc
 }
@@ -67,6 +58,3 @@ output "sg" {
     db = module.db_sg.security_group.id
   }
 }
-
-}
-
