@@ -504,7 +504,13 @@ Vậy là ta đã tìm hiểu xong cách viết code từ đầu và sau đó t�
 
 - https://viblo.asia/p/terraform-series-bai-4-terraform-module-create-virtual-private-cloud-on-aws-ORNZqp2MK0n
 
-huan ga vc
+--**Bai5:  Terraform Series - Module In Depth: Create Multi-Tier Application**  ----
+
+ Ở bài này chúng ta sẽ tìm hiểu sâu hơn về module thông qua việc xây dựng hạ tầng cho một ứng dụng Multi-Tier bao gồm AWS Application Load Balancer + Auto Scaling Group + Relational Database Service
+ 
+ ![image](https://user-images.githubusercontent.com/64687828/179139809-795677ec-e050-49d1-8b93-d65400d40f83.png)
+
+
 
 
 
