@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2591c97d-7503-4f21-bf18-7248bdc38cb2" name="Changes" comment="test resolved conflict">
-      <change afterPath="$PROJECT_DIR$/bai05/modules/database/main.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai05/modules/database/outputs.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai05/modules/database/variables.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img_1.png" afterDir="false" />
+    <list default="true" id="2591c97d-7503-4f21-bf18-7248bdc38cb2" name="Changes" comment="1/2 bai5">
+      <change afterPath="$PROJECT_DIR$/bai05/modules/autoscaling/main.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai05/modules/autoscaling/outputs.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai05/modules/autoscaling/run.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai05/modules/autoscaling/variables.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bai05/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/bai05/main.tf" afterDir="false" />
@@ -15,6 +15,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/main" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />

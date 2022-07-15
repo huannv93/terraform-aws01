@@ -553,7 +553,7 @@ Có một điểm ta cần nói là ở file khai báo biến của database mod
 
 Khi ta muốn truyền một giá trị mà ta không biết nó thuộc loại dữ liệu nào, thì ta sẽ khai báo kiểu dữ của nó là any, ở trên vì biến vpc là any nên ta mới có thể truyền nguyên giá trị của module vpc vào database module được.
 
-```...
+```
 variable "vpc" {
 type = any
 }
@@ -562,6 +562,14 @@ variable "sg" {
 type = any
 }
 ```
+
+**Autoscaling Module**
+
+- ![img_2.png](img_2.png)
+
+
+
+
 
 
 
