@@ -506,7 +506,7 @@ Vậy là ta đã tìm hiểu xong cách viết code từ đầu và sau đó t�
 --**Bai5:  Terraform Series - Module In Depth: Create Multi-Tier Application**  ----
 
 ![img.png](img.png)
-
+```
 .
 ├── main.tf
 └── modules
@@ -522,6 +522,8 @@ Vậy là ta đã tìm hiểu xong cách viết code từ đầu và sau đó t�
       ├── main.tf
       ├── outputs.tf
       └── variables.tf
+      
+```
 
 
  Ở bài này chúng ta sẽ tìm hiểu sâu hơn về module thông qua việc xây dựng hạ tầng cho một ứng dụng Multi-Tier bao gồm AWS Application Load Balancer + Auto Scaling Group + Relational Database Service
@@ -551,14 +553,15 @@ Có một điểm ta cần nói là ở file khai báo biến của database mod
 
 Khi ta muốn truyền một giá trị mà ta không biết nó thuộc loại dữ liệu nào, thì ta sẽ khai báo kiểu dữ của nó là any, ở trên vì biến vpc là any nên ta mới có thể truyền nguyên giá trị của module vpc vào database module được.
 
-``...
+```...
 variable "vpc" {
 type = any
 }
 
 variable "sg" {
 type = any
-}``
+}
+```
 
 
 
