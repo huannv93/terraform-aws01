@@ -9,3 +9,14 @@ variable "vpc" {
 variable "sg" {
   type = any
 }
+
+# tu them vao :
+variable "database_subnets" {
+  type    = list(string)
+}
+
+
+#variable "xxx_subnets" {
+#  type    = list(string)
+#}
+

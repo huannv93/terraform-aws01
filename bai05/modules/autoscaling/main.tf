@@ -9,6 +9,14 @@ data "aws_ami" "ami" {
   owners = ["amazon"]
 }
 
+module "iam_instance_profile" {
+  source  = "terraform-in-action/iip/aws"
+  actions = ["logs:*", "rds:*"]
+}
+
+
+#Ta dùng module terraform-in-action/iip/aws để tạo role với quyền là full access tới logs và rds, sau đó ta gán náo vào aws_launch_template
+
 resource "aws_launch_template" "web" {
   name_prefix   = "web-"
   image_id      = data.aws_ami.ami.id
@@ -17,26 +25,18 @@ resource "aws_launch_template" "web" {
   vpc_security_group_ids = [var.sg.web]
 
   user_data = filebase64("${path.module}/run.sh")
+  iam_instance_profile {
+    name = module.iam_instance_profile.name
+  }
 }
 
-
-resource "aws_autoscaling_group" "web" {
-name                = "${var.project}-asg"
-min_size            = 1
-max_size            = 3
-vpc_zone_identifier = var.vpc.private_subnets
-
-launch_template {
-id      = aws_launch_template.web.id
-version = aws_launch_template.web.latest_version
-}
-}
 
 resource "aws_autoscaling_group" "web" {
   name                = "${var.project}-asg"
   min_size            = 1
   max_size            = 3
   vpc_zone_identifier = var.vpc.private_subnets
+  target_group_arns   = module.alb.target_group_arns
 
   launch_template {
     id      = aws_launch_template.web.id
@@ -53,34 +53,24 @@ module "alb" {
   subnets            = var.vpc.public_subnets
   security_groups    = [var.sg.lb]
   http_tcp_listeners = [
-    {
-      port               = 80,
-      protocol           = "HTTP"
-      target_group_index = 0
-    }
+  {
+  port               = 80,
+  protocol           = "HTTP"
+  target_group_index = 0
+  }
   ]
   target_groups = [
-    {
-      name_prefix      = "web",
-      backend_protocol = "HTTP",
-      backend_port     = 80
-      target_type      = "instance"
-    }
+  {
+  name_prefix      = "web",
+  backend_protocol = "HTTP",
+  backend_port     = 80
+  target_type      = "instance"
+  }
   ]
 }
 
-resource "aws_autoscaling_group" "web" {
-  name                = "${var.project}-asg"
-  min_size            = 1
-  max_size            = 3
-  vpc_zone_identifier = var.vpc.private_subnets
-  target_group_arns   = module.alb.target_group_arns
 
-  launch_template {
-    id      = aws_launch_template.web.id
-    version = aws_launch_template.web.latest_version
-  }
-}
-
+#data-block
+#https://viblo.asia/p/terraform-series-bai-2-life-cycle-cua-mot-resource-trong-terraform-RnB5pOMDlPG
 
 

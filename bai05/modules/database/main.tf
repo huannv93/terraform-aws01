@@ -1,12 +1,12 @@
 resource "aws_db_subnet_group" "default" {
   name       = "main"
-  subnet_ids = [aws_subnet.frontend.id, aws_subnet.backend.id]
+#  subnet_ids = [aws_subnet.frontend.id, aws_subnet.backend.id]
+  subnet_ids = [var.database_subnets]
 
   tags = {
     Name = "My DB subnet group"
   }
 }
-
 
 
 resource "random_password" "password" {
@@ -28,3 +28,6 @@ resource "aws_db_instance" "database" {
   vpc_security_group_ids = [var.sg.db]
   skip_final_snapshot    = true
 }
+
+
+#Ở trên AWS, khi ta tạo RDS, yêu cầu ta cần phải có một subnet groups trước, rồi RDS mới được deploy lên trên subnet group đó.

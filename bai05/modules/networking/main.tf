@@ -32,7 +32,7 @@ module "web_sg" {
   ingress_rules = [
     {
       port        = 80
-      security_groups = [module.lb_sg.security_group.id]
+      security_groups = [module.alb_sg.security_group.id]
     }
   ]
 }
@@ -47,14 +47,4 @@ module "db_sg" {
     }
   ]
 }
-output "vpc" {
-  value = module.vpc
-}
 
-output "sg" {
-  value = {
-    lb = module.lb_sg.security_group.id
-    web = module.web_sg.security_group.id
-    db = module.db_sg.security_group.id
-  }
-}

@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2591c97d-7503-4f21-bf18-7248bdc38cb2" name="Changes" comment="1/2 bai5">
-      <change afterPath="$PROJECT_DIR$/bai05/modules/autoscaling/main.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai05/modules/autoscaling/outputs.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai05/modules/autoscaling/run.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai05/modules/autoscaling/variables.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img_2.png" afterDir="false" />
+    <list default="true" id="2591c97d-7503-4f21-bf18-7248bdc38cb2" name="Changes" comment="full bai5">
+      <change afterPath="$PROJECT_DIR$/bai05/logic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai05/modules/autoscaling/ASG.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai05/modules/autoscaling/Autoscaling.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai05/modules/autoscaling/datablock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai05/modules/database/Database-Module.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai05/modules/networking/Network-module.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai05/modules/networking/outputs.tf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bai05/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/bai05/main.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai05/modules/autoscaling/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/bai05/modules/autoscaling/main.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai05/modules/database/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/bai05/modules/database/main.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai05/modules/database/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/bai05/modules/database/variables.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai05/modules/networking/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/bai05/modules/networking/main.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai05/outputs.tf" beforeDir="false" afterPath="$PROJECT_DIR$/bai05/outputs.tf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +51,11 @@
     <property name="TF_FMT" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bai05/modules/networking" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -75,7 +86,21 @@
       <option name="project" value="LOCAL" />
       <updated>1657858024853</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="full bai5">
+      <created>1657879059354</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1657879059354</updated>
+    </task>
+    <task id="LOCAL-00005" summary="full bai5">
+      <created>1657879105412</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1657879105412</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,6 +147,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test 222" />
     <MESSAGE value="test resolved conflict" />
-    <option name="LAST_COMMIT_MESSAGE" value="test resolved conflict" />
+    <MESSAGE value="1/2 bai5" />
+    <MESSAGE value="full bai5" />
+    <option name="LAST_COMMIT_MESSAGE" value="full bai5" />
   </component>
 </project>
