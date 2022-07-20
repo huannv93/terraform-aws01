@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2591c97d-7503-4f21-bf18-7248bdc38cb2" name="Changes" comment="full bai6-7">
-      <change afterPath="$PROJECT_DIR$/bai-10/.terraform.lock.hcl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-10/blue-green.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-10/main.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-10/resource.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-7/remote-backend/.terraform.lock.hcl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-7/remote-backend/main.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/img_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/img_2.png" afterDir="false" />
+    <list default="true" id="2591c97d-7503-4f21-bf18-7248bdc38cb2" name="Changes" comment="full bai10">
       <change beforePath="$PROJECT_DIR$/img_3.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/img_4.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/img_5.png" beforeDir="false" />
@@ -117,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658300552802</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="full bai10">
+      <created>1658314069026</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1658314069027</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -167,6 +163,7 @@
     <MESSAGE value="1/2 bai5" />
     <MESSAGE value="full bai5" />
     <MESSAGE value="full bai6-7" />
-    <option name="LAST_COMMIT_MESSAGE" value="full bai6-7" />
+    <MESSAGE value="full bai10" />
+    <option name="LAST_COMMIT_MESSAGE" value="full bai10" />
   </component>
 </project>
