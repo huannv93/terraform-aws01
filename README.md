@@ -569,14 +569,57 @@ type = any
 
 
 
+-----**BAI06  Terraform Series - Bài 6 - Terraform Backend: Understand Backend**----
+
+link: https://viblo.asia/p/terraform-series-bai-6-terraform-backend-understand-backend-924lJRr6lPM
+
+Understand Backend
+Khi chúng ta làm việc với Terraform, nếu chỉ làm có một mình ta làm thì mọi chuyện rất yên ổn và không có gì xảy ra, nhưng nếu có thêm một người khác tham gia vào để viết terraform file cùng với ta, thì sẽ có rất nhiều vấn đề xảy ra.
+- làm sao ta có thể share source code với nhau,
+- và làm sao chúng ta share terraform state file với nhau
+- Vấn đề thứ hai là nếu cùng lúc có cả hai người chạy apply, thì hạ tầng của ta sẽ thế nào?
+
+  Để giải quyết những vấn đề trên thì ta sẽ sử dụng một feature của terraform là Backend
+
+- Trong terraform sẽ có ba loại backend như sau:
+Local backend.
+Standard backend.
+Remote backend (enhanced backend).
+
+**Local backend**
+Only local. phu hop voi su dung 1 minh 1 project
+
+**Standard backend**
+Ở loại backend này thì Terraform runtime vẫn được thực thi ở máy local, nhưng sau khi nó chạy xong thì kết quả của nó sẽ được lưu ở một nơi khác (remote state file). Nơi ta dùng để lưu trữ state file có thể là AWS S3, GCP Cloud Storage, ...
+
+Ko bảo mật vì vẫn lưu key dưới local. 
+
+**Remote backend**
+
+![img_3.png](img_3.png)
 
 
+Ngoài việc lựa chọn backend cho terraform, khi làm thực tế ta cũng thường phải xây dựng CI/CD cho một terraform project. Để làm CI/CD cho terraform cũng khá mất thời gian nên để tiết kiệm thời gian ta có thể xài một platform có sẵn của Terraform là Terraform Cloud.
+
+Ko cần tạo CI/CD thêm chop terraform mà dùng trực tiếp terraform cloud.
+Khi xài Terraform Cloud thì những thứ ta cần làm rất đơn giản, chỉ cần viết code và push lên github, Terraform Cloud sẽ pull code xuống và chạy cho ta.
+
+Vậy là ta đã tìm hiểu xong về lý thuyết của Terraform Backend, ở trên là ba loại backend Terraform hỗ trợ khi mình viết bài này, local backend thích hợp khi ta làm dự án một mình, standard và remote backend phù hợp khi ta làm theo team. Tùy vào trường hợp thì ta sẽ xài loại phù hợp. Nếu có thắc mắc hoặc cần giải thích rõ thêm chỗ nào thì các bạn có thể hỏi dưới phần comment. Ở bài tiếp theo ta nói về cách config và triển khai Terraform dùng S3 Standard Backend.
 
 
+-----**BAI07  Terraform Series - Bài 7 - Terraform Backend: S3 Standard Backend**----
 
 
+![img_4.png](img_4.png)
 
+- **Developing an S3 backend**
+![img_5.png](img_5.png)
 
+Từng thành phần trên sẽ được sử dụng như sau:
+
+IAM được sử dụng để terraform assume role, để terraform có quyền ghi vào dynamodb table và fetch/store state vào bên trong S3.
+Dynamodb được terraform dùng để ghi lock key của một process vào bên trong nó, vì dynamodb có tốc độ đọc và ghi nhanh tới mức milisecond nên nó rất thích hợp để lock state của một process.
+S3 bucket dùng để lưu trữ state khi terraform chạy xong, KMS được S3 sử dụng để mã hóa dữ liệu state khi nó được lưu vào bên trong S3.
 
 
 

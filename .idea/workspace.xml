@@ -2,20 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2591c97d-7503-4f21-bf18-7248bdc38cb2" name="Changes" comment="full bai5">
-      <change afterPath="$PROJECT_DIR$/bai05/logic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai05/modules/autoscaling/ASG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai05/modules/autoscaling/Autoscaling.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai05/modules/autoscaling/datablock.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai05/modules/database/Database-Module.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai05/modules/networking/Network-module.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai05/modules/networking/outputs.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai06/S3-Backend-Prepare/Dev-S3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai06/S3-Backend-Prepare/S3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai06/S3-Backend-Prepare/S3.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai06/S3-Backend-Prepare/dynamodb.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai06/S3-Backend-Prepare/iam.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai06/S3-Backend-Prepare/main.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai06/S3-Backend-Prepare/variables.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai06/S3-Backend-Prepare/versions.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai06/Standard Backend.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai06/test-project/main.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_5.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai05/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/bai05/main.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai05/modules/autoscaling/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/bai05/modules/autoscaling/main.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai05/modules/database/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/bai05/modules/database/main.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai05/modules/database/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/bai05/modules/database/variables.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai05/modules/networking/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/bai05/modules/networking/main.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai05/outputs.tf" beforeDir="false" afterPath="$PROJECT_DIR$/bai05/outputs.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657879105412</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="full bai5">
+      <created>1658221776622</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1658221776622</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
