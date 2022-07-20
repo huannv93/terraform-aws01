@@ -622,10 +622,65 @@ Dynamodb được terraform dùng để ghi lock key của một process vào b�
 S3 bucket dùng để lưu trữ state khi terraform chạy xong, KMS được S3 sử dụng để mã hóa dữ liệu state khi nó được lưu vào bên trong S3.
 
 
+--- **BAI08- Terraform Series - Bài 8 - Terraform Backend: Remote Backend with Terraform Cloud**
+
+link: https://viblo.asia/p/terraform-series-bai-8-terraform-backend-remote-backend-with-terraform-cloud-vyDZOR0QKwj
+
+![img.png](img.png)
+
+Terraform Cloud có ba cách sử dụng là:
+
+Version control workflow.
+CLI-driven workflow.
+API-driven workflow.
+Ta sẽ sử dụng CLI-driven workflow cho remote backend, Version control workflow cho CI/CD.
+
+Khi câu lệnh apply chạy xong thì lúc này state file của ta sẽ được lưu ở remote, bạn có thể kiểm tra ở trên terraform cloud, bấm qua tab State.
+**Quan trọng:** lưu ý một điều là khi ta chạy các câu lệnh của terraform với remote backend, thì terraform runtime sẽ không chạy ở máy của ta mà sẽ chạy ở remote server, và nó sẽ stream kết quả về máy local của ta. Do đó, khi bạn đang chạy mà bạn có bấm Ctrl + C để tắt quá trình chạy thì nó chỉ tắt stream thôi, còn runtime ở remote server của ta vẫn chạy bình thường.
+
+--- **Bai 09  : Terraform Series - Bài 9 - CI/CD with Terraform Cloud and Zero-downtime deployments**  ----
+
+**Zero-downtime deployment**
+
+Để tránh downtime trong trường hợp này, terraform cung cấp cho một meta argument tên là create_before_destroy.
+
+            ```Use create_before_destroy
+            resource "aws_instance" "ansible_server" {
+            ami           = data.aws_ami.ami.id
+            instance_type = "t3.small"
+            
+            lifecycle {
+            create_before_destroy = true
+            }
+            }
+            ```
+
+**Considering when use create_before_destroy**
+Thuộc tính create_before_destroy có thể rất thuận tiện, nhưng ta cần nên lưu ý một điều là không phải lúc nào ta cũng có thể sử dụng thuộc tính này cho resource được, vì sẽ có một vài resource bị conflict.
+
+**No zero-downtime deployment**
+
+dịch vụ database của AWS là RDS, khi ta thay đổi instance_type của nó thì ta không thể sử dụng thuộc tính create_before_destroy để thực hiện zero-downtime deployment được, vì lúc này RDS của ta nó đâu có bị xóa và tạo lại đâu, nó chỉ cập nhật lại instance_type và bị downtime mà thôi.
+
+Tất nhiên là cũng sẽ có cách để triển khai zero-downtime deployment cho database được, nhưng quá trình thực hiện sẽ rất phức tạp và cần kết hợp nhiều công cụ khác nhau chứ không thể chỉ dùng Terraform được.
 
 
+--- **Bai10 Terraform Series - Bài 10 - Terraform Blue/Green deployments**  ----
 
+Chào các bạn tới với series về Terraform, ở bài trước chúng ta tìm hiểu về Zero-downtime deployments, nhưng ta chỉ mới tìm hiểu cách thực hiện ZDD cho một resource đơn giản là EC2. Ở bài này ta sẽ tìm hiểu cách thực hiện ZDD cho một resource phức tạp hơn là Autoscaling Group bằng phương pháp Blue/Green deployments.
 
+**Blue/Green deployments**
+Để thực hiện Blue/Green deployment thì ứng dụng của ta sẽ có hai môi trường production, một thằng sẽ được gọi là Blue và một thằng được gọi là Green, chỉ một trong hai thằng này sẽ ở trạng thái live để nhận request của user, còn một thằng con lại sẽ ở trạng thái idle (không làm việc).
 
+**Blue/Green deployments with Autoscaling Group**
+![img_1.png](img_1.png)
 
+**Base resource and Application resource**
+
+- base resource là các thành phần được sử dụng chung và sẽ không thay đổi nhiều trong quá trình deploy
+- application resource có thể thay đổi nhiều trong quá trình deploy, thậm chí có thể xóa nó luôn và tạo lại thằng mới mà không ảnh hưởng gì tới hệ thống của ta.
+Đối với các resource dùng để lưu dữ liệu như là database, thì để chuyển đổi database giữa các môi trường là một vấn đề rất phức tạp nên thông thường ta sẽ xếp database vào trong base resource
+![img_2.png](img_2.png)
+
+**Implement**
 
