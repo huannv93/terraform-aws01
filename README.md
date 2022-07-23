@@ -684,3 +684,28 @@ Chào các bạn tới với series về Terraform, ở bài trước chúng ta 
 
 **Implement**
 
+--- **BAI11 Terraform Series - Bài 11 - Terraform A/B Testing Deployment** ---
+
+link : https://viblo.asia/p/terraform-series-bai-11-terraform-ab-testing-deployment-1Je5EAWj5nL
+
+![img_3.png](img_3.png)
+
+**A/B Testing Deployment**
+
+Đây là phương pháp triển khai mà cho phép ứng dụng của ta sẽ có nhiều version cùng một lúc, và người dùng sẽ được redirect tới một version cụ thể dựa vào một flag gì đó mà ta chỉ định
+
+**A/B Testing Deployment with CloudFront and Lambda@Edge**
+
+![img_4.png](img_4.png)
+
+read more: **https://viblo.asia/p/gioi-thieu-ve-aws-lambda-mot-dich-vu-cua-amazon-l5XRBJD4RqPe**
+
+**Config Lambda@Edge and CloudFront Function.**
+nhúng một cookies vào trong browser của client, cookie mà ta sẽ nhúng có giá trị là **X-Redirect-Flag=Pro** hoặc **X-Redirect-Flag=Pre-Pro**
+Sau đó nếu client gửi request lên trang của ta thì ta sẽ kiểm ta là nếu trong headers của client có cookie với giá trị là X-Redirect-Flag=Pro thì ta sẽ chuyển nó qua S3 pro hoặc ngược lại.
+
+**Hiện tại AWS chỉ hỗ trợ các Lambda nào tạo ở region us-east-1 mới có thể deploy thành Lambda@Edge, nên ta phải tạo Lambda ở region us-east-1.**
+
+Lambda@Edge là gì?
+Lambda@Edge cho phép bạn chạy các hàm của Lamda để customize nội dung mà CloudFront deliver tới người dùng, cụ thể hơn 1 chút nó cho phép chạy các function ở AWS location gần với người dùng nhất từ đó nâng cao tốc độ vận chuyển content.
+Link: https://viblo.asia/p/tim-hieu-ve-lambdaedge-aWj53powK6m
