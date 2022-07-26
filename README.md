@@ -727,3 +727,4 @@ Khi ta dùng Terraform, ta chỉ sử dụng nó cho việc provisioning hạ t�
 ![img_5.png](img_5.png)
 
 Note: Ko hiểu vì sao phải cài ansible lên host remote !
+---> Hiểu, nó đang cài ansible  EC2 để ec2 tự triển khai cho ansible-playbook cho nó luôn. vì ta đang dùng terraform rêmmote
