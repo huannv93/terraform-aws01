@@ -1,60 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2591c97d-7503-4f21-bf18-7248bdc38cb2" name="Changes" comment="full bai10">
-      <change afterPath="$PROJECT_DIR$/bai-11/AB-Testing-deployment.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/Implement.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pre-pro/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pre-pro/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pre-pro/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pre-pro/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pre-pro/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pre-pro/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pre-pro/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pre-pro/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pre-pro/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pre-pro/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pre-pro/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pre-pro/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pre-pro/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pre-pro/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pre-pro/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pre-pro/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pre-pro/src/reportWebVitals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pre-pro/src/setupTests.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pro/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pro/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pro/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pro/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pro/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pro/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pro/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pro/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pro/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pro/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pro/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pro/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pro/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pro/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pro/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pro/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pro/src/reportWebVitals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/s3-pro/src/setupTests.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/terraform/.terraform.lock.hcl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/terraform/cloudfront.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/terraform/function/origin-request.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/terraform/function/origin-request.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/terraform/function/origin-response.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/terraform/function/origin-response.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/terraform/function/viewer-request.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/terraform/function/viewer-request.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/terraform/iam_role.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/terraform/lambda.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/terraform/main.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/terraform/s3.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-11/terraform/s3_pre_pro.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img_4.png" afterDir="false" />
+    <list default="true" id="2591c97d-7503-4f21-bf18-7248bdc38cb2" name="Changes" comment="full bai11">
+      <change afterPath="$PROJECT_DIR$/bai-12/ansible/.terraform.lock.hcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai-12/ansible/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai-12/ansible/main.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai-12/ansible/playbook.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai-12/remote-exec/.terraform.lock.hcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai-12/remote-exec/main.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_5.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -67,6 +21,11 @@
     <option name="BRANCH" value="origin/main" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -179,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658314248941</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="full bai11">
+      <created>1658545828097</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1658545828097</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -230,6 +196,7 @@
     <MESSAGE value="full bai5" />
     <MESSAGE value="full bai6-7" />
     <MESSAGE value="full bai10" />
-    <option name="LAST_COMMIT_MESSAGE" value="full bai10" />
+    <MESSAGE value="full bai11" />
+    <option name="LAST_COMMIT_MESSAGE" value="full bai11" />
   </component>
 </project>
