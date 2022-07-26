@@ -2,16 +2,22 @@ provider "aws" {
   region  = "us-west-2"
 }
 
+terraform {
+  backend "local" {
+    path = "./terraform.tfstate"
+  }
+}
+
 resource "tls_private_key" "key" {
   algorithm = "RSA"
 }
-
+#resource to download key pem to your host!
 resource "local_sensitive_file" "private_key" {
   filename        = "${path.module}/ansible.pem"
   content         = tls_private_key.key.private_key_pem
   file_permission = "0400"
 }
-
+##resource to create key-pair
 resource "aws_key_pair" "key_pair" {
   key_name   = "ansible"
   public_key = tls_private_key.key.public_key_openssh
@@ -85,3 +91,6 @@ resource "aws_instance" "ansible_server" {
 output "ec2" {
   value = aws_instance.ansible_server.public_ip
 }
+
+
+#download key pem test cloud backend ko dc, phai chuyen ve backend local !

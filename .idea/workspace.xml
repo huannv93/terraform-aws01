@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2591c97d-7503-4f21-bf18-7248bdc38cb2" name="Changes" comment="full bai11">
-      <change afterPath="$PROJECT_DIR$/bai-12/ansible/.terraform.lock.hcl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-12/ansible/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-12/ansible/main.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-12/ansible/playbook.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-12/remote-exec/.terraform.lock.hcl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-12/remote-exec/main.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img_5.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai-12/ansible/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/bai-12/ansible/main.tf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +17,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -145,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658545828097</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="full bai11">
+      <created>1658805426543</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1658805426543</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
