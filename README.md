@@ -709,3 +709,21 @@ Sau đó nếu client gửi request lên trang của ta thì ta sẽ kiểm ta l
 Lambda@Edge là gì?
 Lambda@Edge cho phép bạn chạy các hàm của Lamda để customize nội dung mà CloudFront deliver tới người dùng, cụ thể hơn 1 chút nó cho phép chạy các function ở AWS location gần với người dùng nhất từ đó nâng cao tốc độ vận chuyển content.
 Link: https://viblo.asia/p/tim-hieu-ve-lambdaedge-aWj53powK6m
+
+
+--- **BAI 12 Terraform Series - Bài 12 - Ansible with Terraform**  ---
+
+**Provisioners**
+Provisioners có hai loại là:
+
+local-exec: dùng để chạy script ở dưới máy local mà Terraform đang chạy, ta sẽ dùng này để chạy Ansible.
+remote-exec: dùng để chạy script ở máy remote. Ví dụ ta tạo EC2 xong thì ta sẽ dùng remote-exec để chạy đoạn script ở trên con EC2 mới tạo.
+
+Nếu ta EC2 của ta chỉ cần cấu hình đơn giản thì ta chỉ cần dùng remote-exec để chạy mấy câu CLI đơn giản như vậy là được, nhưng nếu EC2 của ta cần cấu hình phức tạp hơn nhiều thì ta không thể chỉ sử dụng mấy câu CLI được, mà ta cần dùng công cụ gọi là Configuration Management.
+
+**Ansible**
+Khi ta dùng Terraform, ta chỉ sử dụng nó cho việc provisioning hạ tầng, còn việc cấu hình hạ tầng thì ta không nên dùng Terraform vì đó không phải lĩnh vực của nó, mà ta nên dùng configuration management. Trong những công cụ configuration management thì có lẽ Ansible là được sử dụng rộng rãi nhất. Mô hình phổ biến như sau.
+
+![img_5.png](img_5.png)
+
+Note: Ko hiểu vì sao phải cài ansible lên host remote !
