@@ -728,3 +728,9 @@ Khi ta dùng Terraform, ta chỉ sử dụng nó cho việc provisioning hạ t�
 
 Note: Ko hiểu vì sao phải cài ansible lên host remote !
 ---> Hiểu, nó đang cài ansible  EC2 để ec2 tự triển khai cho ansible-playbook cho nó luôn. vì ta đang dùng terraform rêmmote
+---> ko thành công, vì terraform remote ko download key pair về đc để ssh ---> fail 1 step. 
+
+--- **BAI 14 Terraform Series - Bài 13 - Automating Terraform with Jenkins CI**  ---
+
+
+

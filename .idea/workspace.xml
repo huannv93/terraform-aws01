@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2591c97d-7503-4f21-bf18-7248bdc38cb2" name="Changes" comment="full bai11">
+    <list default="true" id="2591c97d-7503-4f21-bf18-7248bdc38cb2" name="Changes" comment="full bai12">
+      <change afterPath="$PROJECT_DIR$/bai-14/s3-backend/.terraform.lock.hcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai-14/s3-backend/dynamodb.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai-14/s3-backend/iam.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai-14/s3-backend/main.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai-14/s3-backend/s3.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai-14/s3-backend/variables.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai-14/s3-backend/versions.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai-14/terraform-series-jenkins-example/Jenkinsfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai-14/terraform-series-jenkins-example/main.tf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai-12/ansible/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/bai-12/ansible/main.tf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,10 +51,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TF_FMT" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/bai-14/terraform-series-jenkins-example" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bai-14/terraform-series-jenkins-example" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -146,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658805426543</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="full bai12">
+      <created>1658823550907</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1658823550908</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,6 +214,7 @@
     <MESSAGE value="full bai6-7" />
     <MESSAGE value="full bai10" />
     <MESSAGE value="full bai11" />
-    <option name="LAST_COMMIT_MESSAGE" value="full bai11" />
+    <MESSAGE value="full bai12" />
+    <option name="LAST_COMMIT_MESSAGE" value="full bai12" />
   </component>
 </project>
